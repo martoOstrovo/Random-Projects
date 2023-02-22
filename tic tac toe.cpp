@@ -47,10 +47,10 @@ void igrac(char i)
 	scanf("%i %i",&x,&y);
 	x--;
 	y--;
-	if(XO[x][y]!=' ')
+    if(XO[x][y]!=' ')
 	{
-		printf("Poleto e popolneto.\n");
-	}
+		printf("Poleto e popolneto ili ne postoi.\n");
+	} 
 	else
 	{
 		XO[x][y]=i;
@@ -136,12 +136,24 @@ int main()
 	kraj=pobednik();
 	}
 	while(slobodniMesta()!=0 && pobednik()==' ');
+	if(k==1)
+	{
 	if(kraj=='X')
-	printf("Pobednik e igracot so X\n");
+	printf("Bravo pobedi!\n");
 	else if(kraj=='O')
-	printf("Pobednik e igracot so O\n");
+	printf("Izgubi od kompjuter...\n");
 	else
 	printf("Nereseno e!\n");
+	}
+	else
+	{	
+	if(kraj=='X')
+	printf("Izgubi od kompjuter...\n");
+	else if(kraj=='O')
+	printf("Bravo pobedi!\n");
+	else
+	printf("Nereseno e!\n");
+	}
 	printf("Dali sakas da igras pak?\nnapisi ''Y'' za da ili ''N'' za ne: ");
 	scanf("\n%c",&izbor);
 	system("cls");
