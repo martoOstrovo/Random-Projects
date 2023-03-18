@@ -1,3 +1,4 @@
+// a tic tac toe game made in C
 #include<stdio.h>
 #include<ctype.h>
 #include<stdlib.h>
