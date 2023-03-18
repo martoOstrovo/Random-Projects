@@ -1,3 +1,4 @@
+// A simple program that can eather transform a word into strings of binary numbers for each letter(letter->ascii number->binaru) or does the opposite.
 #include<iostream>
 #include<cstring>
 #include<cmath>
