@@ -17,11 +17,13 @@ int main()
 	char al[100];
 	int n;
 	cout<<"Ako sakas da kodiras zbor pritisni 'k',ako sakas da dekodiras zbor pritisni 'd'"<<endl;
+	cout<<"If yout want to encode a word press 'k',if you want to decode a word press 'd'"<<endl;
 	char izbor;
 	cin>>izbor;
 	if(izbor=='d')
 	{
 	cout<<"Kolku binarni broevi sakas da dekodiras?"<<endl;
+	cout<<"How many binary numbers do you want to decode?"<<endl;	
 	cin>>n;
 	for(int i=0;i<n;i++)
 	{
@@ -36,6 +38,7 @@ int main()
 	else if(izbor=='k')
 	{
 		cout<<"Vnesi nekoj zbor:"<<endl;
+		cout<<"Enter a word:"<<endl;
 		cin>>al;
 		int m=strlen(al);
 		for(int j=0;j<m;j++)
@@ -46,6 +49,7 @@ int main()
 	else
 	{
 		cout<<"Error vo izborot!";
+		cout<<"Error in choice!";
 		exit(-1);
 	}
 	return 0;
