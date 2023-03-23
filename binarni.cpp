@@ -1,4 +1,4 @@
-// A simple program that can eather transform a word into strings of binary numbers for each letter(letter->ascii number->binaru) or does the opposite.
+// A simple program that can eather transform a word or sentence into strings of binary numbers for each letter(letter->ascii number->binary) or does the opposite.
 #include<iostream>
 #include<cstring>
 #include<cmath>
@@ -16,14 +16,14 @@ int main()
 	int dek;
 	char al[100];
 	int n;
-	cout<<"Ako sakas da kodiras zbor pritisni 'k',ako sakas da dekodiras zbor pritisni 'd'"<<endl;
-	cout<<"If yout want to encode a word press 'k',if you want to decode a word press 'd'"<<endl;
+	cout<<"Ako sakas da kodiras zbor ili recenica pritisni 'k',ako sakas da dekodiras zbor pritisni 'd'"<<endl;
+	cout<<"If you want to encode a word or sentence press 'k',if you want to decode a word press 'd'"<<endl;
 	char izbor;
 	cin>>izbor;
 	if(izbor=='d')
 	{
 	cout<<"Kolku binarni broevi sakas da dekodiras?"<<endl;
-	cout<<"How many binary numbers do you want to decode?"<<endl;	
+	cout<<"How many binary numbers do you want to decode?"<<endl;
 	cin>>n;
 	for(int i=0;i<n;i++)
 	{
@@ -37,9 +37,10 @@ int main()
 	}
 	else if(izbor=='k')
 	{
-		cout<<"Vnesi nekoj zbor:"<<endl;
-		cout<<"Enter a word:"<<endl;
-		cin>>al;
+		cout<<"Vnesi nekoj zbor ili recenica:"<<endl;
+		cout<<"Enter a word or sentence:"<<endl;
+		cin.ignore();
+		cin.getline(al,100);
 		int m=strlen(al);
 		for(int j=0;j<m;j++)
 		{
